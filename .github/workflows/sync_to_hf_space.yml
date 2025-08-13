@@ -15,7 +15,7 @@ jobs:
           fetch-depth: 0
       - name: Push to Hugging Face Space
         run: |
-          git remote add hf https://huggingface.co/spaces/Midnightar/voice-gender-detection
+          git remote add hf https://user:${HF_TOKEN}@huggingface.co/spaces/Midnightar/voice-gender-detection
           git push --force hf main
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
